@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Order System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>📦 Place an Order</h1>
+  <form id="orderForm">
+    <label for="product">Product:</label>
+    <select id="product">
+      <option value="Book">Book</option>
+      <option value="Pen">Pen</option>
+    </select>
+
+    <label for="quantity">Quantity:</label>
+    <input type="number" id="quantity" min="1" value="1" required>
+
+    <button type="submit">Submit Order</button>
+  </form>
+
+  <h2>📊 Current Stock</h2>
+  <pre id="stock">Loading...</pre>
+
+  <script src="script.js"></script>
+</body>
+</html>

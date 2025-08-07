@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  inventory-service:
+    build:
+      context: ./inventory-service
+    ports:
+      - "3003:3003"
+    environment:
+      - GOOGLE_APPLICATION_CREDENTIALS=/secrets/gcp-key.json
+    volumes:
+      - ./gcp-key.json:/secrets/gcp-key.json:ro
+
+  order-service:
+    build:
+      context: ./order-service
+    ports:
+      - "3002:3002"
+    environment:
+      - GOOGLE_APPLICATION_CREDENTIALS=/secrets/gcp-key.json
+    volumes:
+      - ./gcp-key.json:/secrets/gcp-key.json:ro
