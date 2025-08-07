@@ -19,13 +19,13 @@ These services talk to each other using **Google Cloud Pub/Sub** (a message syst
 
 ## 🚀 How to Run the Project
 
-### Option 1: Run with Docker (EASY ✅)
+### Option 1: Run with Docker (EASY)
 
 1. Make sure you have **Docker** installed.
 2. Add your **GCP key file** in the main folder (see below).
 3. In your terminal, run:
 
-```bash
+
 docker-compose up --build
 The services will start on:
 
@@ -50,10 +50,6 @@ node index.js
 Before running, make sure your system knows where the GCP key file is:
 
 On Windows PowerShell:
-
-powershell
-Copy
-Edit
 $env:GOOGLE_APPLICATION_CREDENTIALS="C:\Path\To\your-key.json"
 🔑 How to Get the GCP Key File
 Go to Google Cloud Console
@@ -74,10 +70,6 @@ GET /orders → Show all orders
 POST /orders → Create an order
 
 Example POST:
-
-json
-Copy
-Edit
 {
   "id": "order-123",
   "product": "Book",
